@@ -1,0 +1,14 @@
+p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+  color: #8E95A9;
+
+  &.text--large {
+    font-size: 24px;
+  }
+
+  .text--medium {
+    font-size: 16px;
+  }
+}
