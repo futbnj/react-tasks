@@ -6,8 +6,8 @@ function Paragraph({size, children}) {
 	return (
 		<p
 			className={classnames(
-				{'text--large': size === 'large'},
-				{'text--medium': size === 'medium'}
+				{'text--24': size === 24},
+				{'text--16': size === 16}
 			)}
 		>
 			{children}

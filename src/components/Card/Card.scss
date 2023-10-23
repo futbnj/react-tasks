@@ -1,0 +1,44 @@
+.card {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  box-sizing: border-box;
+  padding: 8px 8px 16px 8px;
+  background-color: #20283ECC;
+  border-radius: 16px;
+}
+
+.card-rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #FFAD49;
+  cursor: pointer;
+
+  background-color: #000000A6;
+  padding: 4px 8px;
+  border-radius: 8px;
+
+  position: absolute;
+  top: 16px;
+  left: 16px;
+}
+
+.card--img {
+  border-radius: 10px;
+}
+
+.card-details {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 8px;
+}
