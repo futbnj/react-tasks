@@ -1,4 +1,4 @@
-import './SearchForm.scss';
+import styles from './SearchForm.module.css';
 import {useState} from 'react';
 import Input from '../Input/Input.jsx';
 import Button from '../Button/Button.jsx';
@@ -18,8 +18,8 @@ function SearchForm() {
 
 	return (
 		<>
-			<form onSubmit={search} className={'search-form'}>
-				<Input icon={true} placeholder={'Search'} name={'search'}/>
+			<form onSubmit={search} className={styles['search-form']}>
+				<Input icon={true} placeholder={'Search'} name={styles['search']}/>
 				<Button>Search</Button>
 			</form>
 		</>

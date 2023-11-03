@@ -6,13 +6,11 @@
   gap: 8px;
 
   text-decoration: none;
+}
 
-  &.active,
-  &:hover {
-    .menu-item__title {
-      color: #FFFFFF;
-    }
-  }
+.menu-item.active .menu-item__title,
+.menu-item:hover .menu-item__title {
+  color: #FFFFFF;
 }
 
 .menu-item__title {

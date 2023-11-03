@@ -1,4 +1,4 @@
-import './Heading.scss';
+// import styles './Heading.module.css';
 
 function Heading({size, children}) {
 

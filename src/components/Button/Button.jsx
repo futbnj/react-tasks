@@ -1,10 +1,10 @@
-import './Button.scss';
+import styles from './Button.module.css';
 
 function Button({children}) {
 
 	return (
 		<>
-			<button className={'button--primary'}>{children}</button>
+			<button className={styles['button--primary']}>{children}</button>
 		</>
 	);
 }

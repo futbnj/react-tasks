@@ -14,8 +14,8 @@
   padding: 0;
 
   cursor: pointer;
+}
 
-  &.active {
-    color: #37D8A7;
-  }
+.active {
+  color: #37D8A7;
 }

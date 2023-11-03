@@ -1,13 +1,13 @@
-import './Input.scss';
+import styles from './Input.module.css';
 
 function Input({icon, name, placeholder = 'Enter text..'}) {
 
 	return (
-		<div className={'input-wrapper'}>
+		<div className={styles['input-wrapper']}>
 			{icon && (
-				<img src="/search.svg" alt="Search" className={'input-icon'}/>
+				<img src="/search.svg" alt="Search" className={styles['input-icon']}/>
 			)}
-			<input className={'input'} name={name} placeholder={placeholder}/>
+			<input className={styles['input']} name={name} placeholder={placeholder}/>
 		</div>
 	);
 }

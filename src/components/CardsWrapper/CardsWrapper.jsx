@@ -1,9 +1,9 @@
-import './CardsWrapper.scss';
+import styles from './CardsWrapper.module.css';
 
 function CardsWrapper({children}) {
 
 	return (
-		<div className={'cards-wrapper'}>
+		<div className={styles['cards-wrapper']}>
 			{children}
 		</div>
 	);

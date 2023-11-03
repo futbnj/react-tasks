@@ -4,11 +4,11 @@
   justify-content: space-between;
 
   padding: 16px 120px;
+}
 
-  .nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: end;
-    gap: 16px;
-  }
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 16px;
 }

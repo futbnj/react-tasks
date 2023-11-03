@@ -1,4 +1,4 @@
-import './Paragraph.scss';
+import styles from './Paragraph.module.css';
 import classnames from 'classnames';
 
 function Paragraph({size, children}) {
@@ -6,8 +6,8 @@ function Paragraph({size, children}) {
 	return (
 		<p
 			className={classnames(
-				{'text--24': size === 24},
-				{'text--16': size === 16}
+				{[styles['text--24']]: size === 24},
+				{[styles['text--16']]: size === 16}
 			)}
 		>
 			{children}
