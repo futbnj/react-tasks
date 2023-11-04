@@ -7,9 +7,7 @@ function SearchForm() {
 
 	const [searchRequest, setSearchRequest] = useState('');
 
-	console.log(searchRequest);
-
-	const search = (e) => {
+	const handleSubmit = (e) => {
 		e.preventDefault();
 		const formData = new FormData(e.target);
 		const formProps = Object.fromEntries(formData);
@@ -18,8 +16,8 @@ function SearchForm() {
 
 	return (
 		<>
-			<form onSubmit={search} className={'search-form'}>
-				<Input icon={true} placeholder={'Search'} name={'search'}/>
+			<form onSubmit={handleSubmit} className={'search-form'}>
+				<Input value={searchRequest} onChange={setSearchRequest} iconName={'search.svg'} placeholder={'Search'} name={'search'}/>
 				<Button>Search</Button>
 			</form>
 		</>

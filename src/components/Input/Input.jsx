@@ -1,13 +1,17 @@
 import './Input.scss';
 
-function Input({icon, name, placeholder = 'Enter text..'}) {
+function Input({value, iconName, name, placeholder = 'Enter text..', onChange, ...props}) {
+
+	const handleChange = (e) => {
+		onChange(e.target.value);
+	};
 
 	return (
-		<div className={'input-wrapper'}>
-			{icon && (
-				<img src="/search.svg" alt="Search" className={'input-icon'}/>
+		<div className={'input-wrapper'} {...props}>
+			{iconName && (
+				<img src={'/' + iconName} alt="Search" className={'input-icon'}/>
 			)}
-			<input className={'input'} name={name} placeholder={placeholder}/>
+			<input className={'input'} value={value} onChange={handleChange} name={name} placeholder={placeholder}/>
 		</div>
 	);
 }

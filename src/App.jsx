@@ -5,10 +5,9 @@ import SearchForm from './components/SearchForm/SearchForm.jsx';
 import Header from './layout/Header/Header.jsx';
 import Body from './layout/Body/Body.jsx';
 import Card from './components/Card/Card.jsx';
-import CardsWrapper from './components/CardsWrapper/CardsWrapper.jsx';
-import {useState} from 'react';
+import CardList from './components/CardsWrapper/CardList.jsx';
 
-const INITIAL_DATA = [
+const INITIAL_MOVIES = [
 	{
 		id: 1,
 		title: 'Black Widow',
@@ -31,8 +30,6 @@ const INITIAL_DATA = [
 
 function App() {
 
-	const [moviesList, setMoviesList] = useState(INITIAL_DATA);
-
 	return (
 		<div className={'app'}>
 			<Header />
@@ -40,11 +37,11 @@ function App() {
 				<Heading size={'h1'}>Search</Heading>
 				<Paragraph size={'medium'}>Введите название фильма, сериала или мультфильма для поиска и добавления в избранное.</Paragraph>
 				<SearchForm />
-				<CardsWrapper>
-					{moviesList.map(el => (
-						<Card key={el.id} title={el.title} imageTitle={el.image} rating={el.rating}/>
+				<CardList>
+					{INITIAL_MOVIES.map(movie => (
+						<Card key={movie.id} title={movie.title} imageTitle={movie.image} rating={movie.rating}/>
 					))}
-				</CardsWrapper>
+				</CardList>
 			</Body>
 		</div>
 	);
