@@ -1,11 +1,14 @@
 import styles from './SearchForm.module.css';
-import {useState} from 'react';
+import {useRef, useState} from 'react';
 import Input from '../Input/Input.jsx';
 import Button from '../Button/Button.jsx';
 
 function SearchForm() {
 
 	const [searchRequest, setSearchRequest] = useState('');
+
+	const inputRef = useRef();
+	const btnRef = useRef();
 
 	console.log(searchRequest);
 
@@ -19,8 +22,8 @@ function SearchForm() {
 	return (
 		<>
 			<form onSubmit={search} className={styles['search-form']}>
-				<Input icon={true} placeholder={'Search'} name={styles['search']}/>
-				<Button>Search</Button>
+				<Input icon={true} ref={inputRef} placeholder={'Search'} name={styles['search']}/>
+				<Button ref={btnRef}>Search</Button>
 			</form>
 		</>
 	);

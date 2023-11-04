@@ -1,12 +1,13 @@
 import styles from './Button.module.css';
+import {forwardRef} from 'react';
 
-function Button({children}) {
+const Button = forwardRef(function Button({children, ...props}) {
 
 	return (
 		<>
-			<button className={styles['button--primary']}>{children}</button>
+			<button className={styles['button--primary']} {...props}>{children}</button>
 		</>
 	);
-}
+});
 
 export default Button;
