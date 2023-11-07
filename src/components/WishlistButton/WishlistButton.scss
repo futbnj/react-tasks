@@ -1,0 +1,21 @@
+.wishlist-button {
+  display: flex;
+  gap: 8px;
+
+  cursor: pointer;
+}
+
+.wishlist-button--btn {
+  color: #7B6EF6;
+  font-weight: 600;
+
+  border: none;
+  background: transparent;
+  padding: 0;
+
+  cursor: pointer;
+
+  &.active {
+    color: #37D8A7;
+  }
+}

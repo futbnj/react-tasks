@@ -1,0 +1,15 @@
+p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+  color: #8E95A9;
+  margin: 0;
+
+  &.text--24 {
+    font-size: 24px;
+  }
+
+  .text--16 {
+    font-size: 16px;
+  }
+}

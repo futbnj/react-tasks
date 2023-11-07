@@ -1,0 +1,44 @@
+.menu-item {
+  padding: 12px 16px;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  text-decoration: none;
+
+  &.active,
+  &:hover {
+    .menu-item__title {
+      color: #FFFFFF;
+    }
+  }
+}
+
+.menu-item__title {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  color: #A8AEBF;
+}
+
+.menu-item__counter {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #7B6EF6;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 600;
+  color: #FFFFFF;
+}
+
+.menu-item__icon {
+  width: 24px;
+  height: 24px;
+}
