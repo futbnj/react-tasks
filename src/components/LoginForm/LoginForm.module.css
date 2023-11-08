@@ -1,0 +1,14 @@
+.search-form {
+  display: flex;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.search-form:focus-visible,
+.search-form:focus {
+  outline: 1px solid black;
+}
+
+.invalid {
+  outline: 1px solid red;
+}

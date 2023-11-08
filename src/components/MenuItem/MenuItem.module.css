@@ -6,6 +6,10 @@
   gap: 8px;
 
   text-decoration: none;
+
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
 .menu-item.active .menu-item__title,

@@ -1,14 +1,19 @@
 import styles from './Input.module.css';
 import {forwardRef} from 'react';
+import cn from 'classnames';
 
-const Input = forwardRef(function Input({icon, name, placeholder = 'Enter text..', ...props}) {
+const Input = forwardRef(function Input({value, iconName, name, placeholder = 'Enter text..', onChange, classNames, ...props}, ref) {
+
+	const handleChange = (e) => {
+		onChange(e.target.value);
+	};
 
 	return (
-		<div className={styles['input-wrapper']} {...props}>
-			{icon && (
-				<img src="/search.svg" alt="Search" className={styles['input-icon']}/>
+		<div className={cn(styles['input-wrapper'], classNames)} {...props} >
+			{iconName && (
+				<img src={'/' + iconName} alt="Search" className={'input-icon'}/>
 			)}
-			<input className={styles['input']} name={name} placeholder={placeholder}/>
+			<input className={styles['input']} ref={ref} value={value} onChange={handleChange} name={name} placeholder={placeholder}/>
 		</div>
 	);
 });

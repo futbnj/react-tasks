@@ -12,6 +12,10 @@
   gap: 16px;
 }
 
+.input-wrapper:focus-visible {
+  outline: 1px solid red;
+}
+
 .input {
   border: none;
   background-color: transparent;
@@ -24,10 +28,6 @@
   padding: 12px 0;
 
   width: 100%;
-}
-
-.input:focus-visible {
-  outline: none;
 }
 
 .input-icon {
