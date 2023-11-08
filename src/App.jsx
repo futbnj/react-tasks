@@ -1,11 +1,11 @@
-import './App.css';
+import styles from './App.module.css';
 import Heading from './components/Heading/Heading.jsx';
 import Paragraph from './components/Paragraph/Paragraph.jsx';
 import SearchForm from './components/SearchForm/SearchForm.jsx';
 import Header from './layout/Header/Header.jsx';
 import Body from './layout/Body/Body.jsx';
 import Card from './components/Card/Card.jsx';
-import CardList from './components/CardsWrapper/CardList.jsx';
+import CardList from './components/CardList/CardList.jsx';
 import {UserContextProvider} from './context/user.context.jsx';
 import LoginForm from './components/LoginForm/LoginForm.jsx';
 import {useLocalStorage} from './hooks/use-localstorage.hook.js';
@@ -35,7 +35,7 @@ function App() {
 	const [userData, setUserData] = useLocalStorage('user');
 
 	return (
-		<div className={'app'}>
+		<div className={styles['app']}>
 			<UserContextProvider>
 				<Header userData={userData} setUserData={setUserData}/>
 				<Body>

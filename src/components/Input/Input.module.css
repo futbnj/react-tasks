@@ -30,6 +30,11 @@
   width: 100%;
 }
 
+.input:focus-visible {
+  outline: none;
+  background-color: transparent;
+}
+
 .input-icon {
   width: 24px;
   height: 24px;
