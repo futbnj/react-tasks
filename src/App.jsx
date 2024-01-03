@@ -5,7 +5,7 @@ import SearchForm from './components/SearchForm/SearchForm.jsx';
 import Header from './layout/Header/Header.jsx';
 import Body from './layout/Body/Body.jsx';
 import Card from './components/Card/Card.jsx';
-import CardList from './components/CardList/CardList.jsx';
+import CardsWrapper from './components/CardsWrapper/CardsWrapper.jsx';
 import {UserContextProvider} from './context/user.context.jsx';
 import LoginForm from './components/LoginForm/LoginForm.jsx';
 import {useLocalStorage} from './hooks/use-localstorage.hook.js';
@@ -43,11 +43,11 @@ function App() {
 					<Paragraph size={'medium'}>Введите название фильма, сериала или мультфильма для поиска и добавления в избранное.</Paragraph>
 					<LoginForm setUserData={setUserData} userData={userData}/>
 					{/*<SearchForm />*/}
-					<CardList>
+					<CardsWrapper>
 						{INITIAL_MOVIES.map(movie => (
 							<Card key={movie.id} title={movie.title} imageTitle={movie.image} rating={movie.rating}/>
 						))}
-					</CardList>
+					</CardsWrapper>
 				</Body>
 			</UserContextProvider>
 		</div>

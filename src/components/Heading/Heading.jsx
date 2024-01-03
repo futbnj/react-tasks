@@ -1,5 +1,3 @@
-// import styles './Heading.module.css';
-
 function Heading({size, children}) {
 
 	switch (size) {

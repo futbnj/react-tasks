@@ -22,7 +22,7 @@ function LoginForm({userData, setUserData}) {
 
 	const updateUserData = (userName) => {
 		if (userData.some(user => user.userName === userName)) {
-			setUserData([...userData.map(user => {
+			setUserData([userData.map(user => {
 				return {
 					...user,
 					isLoggedIn: user.userName === userName
